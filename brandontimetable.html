@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brandon's Timetable</title>
+  <style>
+    /* Modern CSS layout */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      background-image: url('dubetraderscourse.png');
+      background-position: center;
+      background-color: #f2f2f2;
+      color: #333;
+    }
+
+    section {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+      width: 100%;
+      font-size: 24px;
+    }
+
+    table {
+      width: 90%;
+      max-width: 1000px;
+      margin-top: 20px;
+      border-collapse: collapse;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    th,
+    td {
+      padding: 12px;
+      text-align: center;
+      border: 1px solid #f2f2f2;
+      font-size: 16px;
+      color: #333;
+    }
+
+    th {
+      background-color: #333;
+      color: #fff;
+      font-size: 18px;
+      text-transform: uppercase;
+    }
+
+    td:last-child {
+      border-right: none;
+    }
+
+    td:first-child {
+      border-left: none;
+    }
+
+    tfoot {
+      font-size: 14px;
+      font-style: italic;
+      text-align: center;
+    }
+
+    tfoot td {
+      border: none;
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      font-size: 14px;
+    }
+
+    #clock {
+      font-size: 14px;
+      color: #f2f2f2;
+    }
+
+    #activity-info {
+      font-size: 16px;
+      color: #f2f2f2;
+      margin-bottom: 5px;
+    }
+
+    #workout-link a {
+      color: white; /* Set the link color to white */
+      text-decoration: none;
+    }
+
+    #workout-link a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    Brandon's Timetable
+  </header>
+  <table>
+    <tr>
+      <th>Day</th>
+      <th>Time</th>
+      <th>Activity</th>
+    </tr><!-- Monday -->
+    <tr>
+      <td rowspan="11" style="font-size: 20px;">Monday</td>
+      <td>04:00 - 05:00</td>
+      <td>Bath & Dress</td>
+    </tr>
+    <tr>
+      <td>05:00 - 05:50</td>
+      <td>Study Session 1</td>
+    </tr>
+    <tr>
+      <td>07:30 - 14:30</td>
+      <td>Attend School</td>
+    </tr>
+    <tr>
+      <td>14:30 - 16:00</td>
+      <td>Return Home</td>
+    </tr>
+    <tr>
+      <td>16:00 - 18:00</td>
+      <td>Homework</td>
+    </tr>
+    <tr>
+      <td>18:00 - 19:00</td>
+      <td>Workout</td>
+    </tr>
+    <tr>
+      <td>19:00 - 20:00</td>
+      <td>Supper/Rest</td>
+    </tr>
+    <tr>
+      <td>20:00 - 21:00</td>
+      <td>Study Session 2</td>
+    </tr>
+    <tr>
+      <td>21:00 - 21:30</td>
+      <td>Break</td>
+    </tr>
+    <tr>
+      <td>21:30 - 22:30</td>
+      <td>Study Session 3</td>
+    </tr>
+    <tr>
+      <td>22:30 - 04:00</td>
+      <td>Sleep</td>
+    </tr>
+    <tfoot>
+      <tr>
+        <td colspan="3">
+          <a href="workout.html" id="workout-link">View Today's Workout</a>
+        </td>
+      </tr>
+    </tfoot>
+  </table>
+  
+  <!-- Tuesday -->
+  <table>
+    <tr>
+      <th>Day</th>
+      <th>Time</th>
+      <th>Activity</th>
+    </tr>
+    <tr>
+      <td rowspan="10" style="font-size: 20px;">Tuesday</td>
+      <td>04:00 - 05:00</td>
+      <td>Bath & Dress</td>
+    </tr>
+    <tr>
+      <td>05:00 - 05:50</td>
+      <td>Study Session 1</td>
+    </tr>
+    <tr>
+      <td>07:30 - 14:30</td>
+      <td>Attend School</td>
+    </tr>
+    <tr>
+      <td>14:30 - 16:00</td>
+      <td>Return Home</td>
+    </tr>
+    <tr>
+      <td>16:00 - 19:00</td>
+      <td>Homework</td>
+    </tr>
+    <tr>
+      <td>19:00 - 20:00</td>
+      <td>Supper/Rest</td>
+    </tr>
+    <tr>
+      <td>20:00 - 21:00</td>
+      <td>Study Session 2</td>
+    </tr>
+    <tr>
+      <td>21:00 - 21:30</td>
+      <td>Break</td>
+    </tr>
+    <tr>
+      <td>21:30 - 22:30</td>
+      <td>Study Session 3</td>
+    </tr>
+    <tr>
+      <td>22:30 - 04:00</td>
+      <td>Sleep</td>
+    </tr>
+  </table><!-- Wednesday -->
+  <table>
+    <tr>
+      <th>Day</th>
+      <th>Time</th>
+      <th>Activity</th>
+    </tr>
+    <tr>
+      <td rowspan="11" style="font-size: 20px;">Wednesday</td>
+      <td>04:00 - 05:00</td>
+      <td>Bath & Dress</td>
+    </tr>
+    <tr>
+      <td>05:00 - 05:50</td>
+      <td>Study Session 1</td>
+    </tr>
+    <tr>
+      <td>07:30 - 14:30</td>
+      <td>Attend School</td>
+    </tr>
+    <tr>
+      <td>14:30 - 16:00</td>
+      <td>Return Home</td>
+    </tr>
+    <tr>
+      <td>16:00 - 18:00</td>
+      <td>Homework</td>
+    </tr>
+    <tr>
+      <td>18:00 - 19:00</td>
+      <td>Workout</td>
+    </tr>
+    <tr>
+      <td>19:00 - 20:00</td>
+      <td>Supper/Rest</td>
+    </tr>
+    <tr>
+      <td>20:00 - 21:00</td>
+      <td>Study Session 2</td>
+    </tr>
+    <tr>
+      <td>21:00 - 21:30</td>
+      <td>Break</td>
+    </tr>
+    <tr>
+      <td>21:30 - 22:30</td>
+      <td>Study Session 3</td>
+    </tr>
+    <tr>
+      <td>22:30 - 04:00</td>
+      <td>Sleep</td>
+    </tr>
+    <tfoot>
+      <tr>
+        <td colspan="3">
+          <a href="workout.html" id="workout-link">View Today's Workout</a>
+        </td>
+      </tr>
+    </tfoot>
+  </table><!-- Thursday -->
+  <table>
+    <tr>
+      <th>Day</th>
+      <th>Time</th>
+      <th>Activity</th>
+    </tr>
+    <tr>
+      <td rowspan="11" style="font-size: 20px;">Thursday</td>
+      <td>04:00 - 05:00</td>
+      <td>Bath & Dress</td>
+    </tr>
+    <tr>
+      <td>05:00 - 05:50</td>
+      <td>Study Session 1</td>
+    </tr>
+    <tr>
+      <td>07:30 - 14:30</td>
+      <td>Attend School</td>
+    </tr>
+    <tr>
+      <td>14:30 - 16:00</td>
+      <td>Return Home</td>
+    </tr>
+    <tr>
+      <td>16:00 - 18:00</td>
+      <td>Homework</td>
+    </tr>
+    <tr>
+      <td>18:00 - 19:00</td>
+      <td>Workout</td>
+    </tr>
+    <tr>
+      <td>19:00 - 20:00</td>
+      <td>Supper/Rest</td>
+    </tr>
+    <tr>
+      <td>20:00 - 21:00</td>
+      <td>Study Session 2</td>
+    </tr>
+    <tr>
+      <td>21:00 - 21:30</td>
+      <td>Break</td>
+    </tr>
+    <tr>
+      <td>21:30 - 22:30</td>
+      <td>Study Session 3</td>
+    </tr>
+    <tr>
+      <td>22:30 - 04:00</td>
+      <td>Sleep</td>
+    </tr>
+    <tfoot>
+      <tr>
+        <td colspan="3">
+          <a href="workout.html" id="workout-link">View Today's Workout</a>
+        </td>
+      </tr>
+    </tfoot>
+  </table><!-- Friday -->
+  <table>
+    <tr>
+      <th>Day</th>
+      <th>Time</th>
+      <th>Activity</th>
+    </tr>
+    <tr>
+      <td rowspan="9" style="font-size: 20px;">Friday</td>
+      <td>04:00 - 05:00</td>
+      <td>Bath & Dress</td>
+    </tr>
+    <tr>
+      <td>05:00 - 05:50</td>
+      <td>Study Session 1</td>
+    </tr>
+    <tr>
+      <td>07:30 - 14:30</td>
+      <td>Attend School</td>
+    </tr>
+    <tr>
+      <td>14:30 - 16:00</td>
+      <td>Return Home</td>
+    </tr>
+    <tr>
+      <td>16:00 - 18:00</td>
+      <td>Homework</td>
+    </tr>
+    <tr>
+      <td>18:00 - 19:00</td>
+      <td>Study Session 2</td>
+    </tr>
+    <tr>
+      <td>19:30 - 21:00</td>
+      <td>Youth</td>
+    </tr>
+    <tr>
+      <td>21:00 - 22:00</td>
+      <td>Study Session 3</td>
+    </tr>
+    <tr>
+      <td>22:00 - 8:00</td>
+      <td>Sleep</td>
+    </tr>
+  </table><!-- Saturday -->
+  <table>
+    <tr>
+      <th>Day</th>
+      <th>Time</th>
+      <th>Activity</th>
+    </tr>
+    <tr>
+      <td rowspan="9" style="font-size: 20px;">Saturday</td>
+      <td>9:00-10:00</td>
+      <td>Study Session 1</td>
+    </tr>
+    <tr>
+      <td>10:00 - 10:30</td>
+      <td>Breakfast</td>
+    </tr>
+    <tr>
+      <td>10:30 - 11:30</td>
+      <td>Study Session 2</td>
+    </tr>
+    <tr>
+      <td>11:30 - 12:00</td>
+      <td>Break</td>
+    </tr>
+    <tr>
+      <td>12:00 - 13:00</td>
+      <td>Study Session 3</td>
+    </tr>
+    <tr>
+      <td>13:00 - 14:00</td>
+      <td>Lunch</td>
+    </tr>
+    <tr>
+      <td>14:00 - 15:00</td>
+      <td>Study Session 4</td>
+    </tr>
+    <tr>
+      <td>15:00 - 15:30</td>
+      <td>Break</td>
+    </tr>
+	 </tr>
+    <tr>
+      <td>15:30 - 17:00</td>
+      <td>Study Session 5</td>
+    </tr>
+    <tfoot>
+      <tr>
+        <td colspan="3">
+          <a href="workout.html" id="workout-link">View Today's Workout</a>
+        </td>
+      </tr>
+    </tfoot>
+  </table><!-- Sunday -->
+  <table>
+    <tr>
+      <th>Day</th>
+      <th>Time</th>
+      <th>Activity</th>
+    </tr>
+    <tr>
+      <td rowspan="10" style="font-size: 20px;">Sunday</td>
+      <td>09:00 - 10:00</td>
+      <td>Church</td>
+    </tr>
+    <tr>
+      <td>10:00 - 10:30</td>
+      <td>Breakfast</td>
+    </tr>
+    <tr>
+      <td>10:30 - 11:30</td>
+      <td>Study Session 1</td>
+    </tr>
+    <tr>
+      <td>11:30 - 12:00</td>
+      <td>Break</td>
+    </tr>
+    <tr>
+      <td>12:00 - 13:00</td>
+      <td>Study Session 2</td>
+    </tr>
+    <tr>
+      <td>13:00 - 14:00</td>
+      <td>Lunch</td>
+    </tr>
+    <tr>
+      <td>14:00 - 15:00</td>
+      <td>Study Session 3</td>
+    </tr>
+    <tr>
+      <td>15:00 - 15:30</td>
+      <td>Break</td>
+    </tr>
+    <tr>
+      <td>15:30 - 17:00</td>
+      <td>Workout</td>
+    </tr>
+	<tr>
+      <td>10:30 - 11:30</td>
+      <td>Study Session 4</td>
+    </tr>
+    <tr>
+    <tfoot>
+      <tr>
+        <td colspan="3">
+          <a href="workout.html" id="workout-link">View Today's Workout</a>
+        </td>
+      </tr>
+    </tfoot>
+  </table>
+  </section>
+  
+  <br>
+  
+  <section>
+    <u><h2>Quote</h2></u>
+    <center><p>From crawling I went to walking, from walking to foreigns in my garage.</p></center>
+   <u><b><center><p>Brandon Dube</p></center></b></u>
+	</section>
+	
+  <section>
+  <p></p>
+  </section>
+  
+  <footer>
+    <p id="clock">Loading...</p>
+  </footer>
+   <script>
+    // Function to update the clock time
+    function updateClock() {
+      const now = new Date();
+      const clockElement = document.getElementById("clock");
+      clockElement.textContent = now.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true });
+    }
+
+    // Function to display a pop-up notification with the current activity
+    function showNotification(activity) {
+      if (Notification.permission === 'granted') {
+        const notification = new Notification('Current Activity', {
+          body: `Your current activity is: ${activity}`,
+          icon: 'path-to-your-icon.png' // Replace with the path to your notification icon
+        });
+      }
+    }
+
+    // Request permission for notifications
+    if (Notification.permission !== 'granted') {
+      Notification.requestPermission();
+    }
+
+    // Function to determine the current activity based on the day of the week
+    function getCurrentActivity() {
+      const now = new Date();
+      const dayOfWeek = now.getDay();
+      let currentActivity = "Unknown";
+
+      // Check the current day and set the corresponding activity
+      switch (dayOfWeek) {
+        case 1:
+        case 2:
+        case 3:
+        case 4:
+          currentActivity = "School";
+          break;
+        case 5:
+          currentActivity = "Youth";
+          break;
+        case 6:
+        case 0:
+          currentActivity = "Weekend";
+          break;
+      }
+
+      return currentActivity;
+    }
+
+    // Call updateClock every second to keep the time updated
+    setInterval(updateClock, 1000);
+
+    // Call showNotification every minute to update the current activity and display a notification
+    setInterval(() => {
+      const currentActivity = getCurrentActivity();
+      showNotification(currentActivity);
+    }, 60000);
+  </script>
+</body>
+</html>

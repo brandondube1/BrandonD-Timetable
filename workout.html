@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brandon's Timetable</title>
+  <style>
+    /* Modern CSS layout */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      background-color: #f2f2f2;
+      color: #333;
+    }
+    header {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+      width: 100%;
+      font-size: 24px;
+    }
+    table {
+      width: 90%;
+      max-width: 1000px;
+      margin-top: 20px;
+      border-collapse: collapse;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    th, td {
+      padding: 12px;
+      text-align: center;
+      border: 1px solid #f2f2f2;
+      font-size: 16px;
+      color: #333;
+    }
+    th {
+      background-color: #333;
+      color: #fff;
+      font-size: 18px;
+      text-transform: uppercase;
+    }
+    td:last-child {
+      border-right: none;
+    }
+    td:first-child {
+      border-left: none;
+    }
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      font-size: 14px;
+    }
+    #clock {
+      font-size: 14px;
+      color: #f2f2f2;
+    }
+    #activity-info {
+      font-size: 16px;
+      color: #f2f2f2;
+      margin-bottom: 5px;
+    }
+    #workout-link a {
+      color: #00f;
+      text-decoration: none;
+    }
+    #workout-link a:hover {
+      text-decoration: underline;
+    }
+        <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Workout Details<\/title>
+  <style>
+    /* Modern CSS layout */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      background-color: #f2f2f2;
+      color: #333;
+    }
+    header {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    section {
+      width: 90%;
+      margin-bottom: 30px;
+      border: 1px solid #333; /* Add border to the workout section */
+      padding: 10px; /* Add padding to create space between exercises */
+    }
+    h2 {
+      border-bottom: 1px solid #333;
+      padding-bottom: 5px;
+    }
+    p {
+      margin-bottom: 10px;
+    }
+    footer {
+      font-size: 14px;
+      margin-top: 30px;
+    }
+    #back-link a {
+      color: white;
+      text-decoration: none;
+      border-bottom: 1px solid #333;
+    }
+    #back-link a:hover {
+      color: #f2f2f2;
+      border-bottom: 1px solid #f2f2f2;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    Workout Details
+  </header><!-- Workout details for each day -->
+  <h2>Sunday: Chest and Triceps</h2>
+  <p>Warm-up: 5 minutes of jumping jacks or jogging in place</p>
+  <p>Dumbbell Bench Press: 3 sets of 8-10 reps</p>
+  <p>Dumbbell Flyes: 3 sets of 12 reps</p>
+  <p>Overhead Triceps Extension: 3 sets of 10 reps</p>
+  <p>Tricep Kickbacks: 3 sets of 12 reps</p>
+  <h2>Monday: Back and Biceps</h2>
+  <p>Warm-up: 5 minutes of jumping jacks or jogging in place</p>
+  <p>Dumbbell Rows: 3 sets of 8-10 reps</p>
+  <p>Renegade Rows: 3 sets of 10 reps</p>
+  <p>Hammer Curls: 3 sets of 10 reps</p>
+  <p>Reverse Curls: 3 sets of 12 reps</p>
+  <h2>Tuesday: Rest Day</h2>
+  <p>Take a well-deserved rest day!</p>
+  <h2>Wednesday: Shoulders and Abs</h2>
+  <p>Warm-up: 5 minutes of jumping jacks or jogging in place</p>
+  <p>Dumbbell Shoulder Press: 3 sets of 8 reps</p>
+  <p>Lateral Raises: 3 sets of 12 reps</p>
+  <p>Bent-over Flyes: 3 sets of 12 reps</p>
+  <p>Russian Twists: 3 sets of 15 reps</p>
+  <p>Plank: 3 sets of 30 seconds</p>
+  <h2>Thursday: Legs</h2>
+  <p>Warm-up: 5 minutes of jumping jacks or jogging in place</p>
+  <p>Goblet Squats: 3 sets of 8 reps</p>
+  <p>Lunges: 3 sets of 12 reps</p>
+  <p>Romanian Deadlifts: 3 sets of 10 reps</p>
+  <p>Calf Raises: 3 sets of 15 reps</p>
+  <h2>Friday: Rest Day</h2>
+  <p>Take a well-deserved rest day!</p>
+  <h2>Saturday: Full Body</h2>
+  <p>Warm-up: 5 minutes of jumping jacks or jogging in place</p>
+  <p>Push-ups: 3 sets of 10 reps</p>
+  <p>Pull-ups: 3 sets of 8 reps</p>
+  <p>Squats: 3 sets of 12 reps</p>
+  <p>Plank: 3 sets of 30 seconds</p>
+  <br>
+  <footer>
+    <p id="back-link"><a href="brandontimetable.html">Back to Timetable</a></p>
+  </footer>
+</body>
+</html>
